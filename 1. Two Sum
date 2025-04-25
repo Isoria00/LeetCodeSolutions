@@ -1,0 +1,14 @@
+1. TWO SUM
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}                           # Create dictionary
+        for i, v in enumerate(nums):        # enumerate nums list
+            diff = target - nums[i]         # find difference between target number and current index value     
+            if diff in seen:                # Check if the difference is in the dictionary keys
+                return [seen[diff], i]      # return the array 
+            seen[v] = i                     # adds current index and value into the dictionary
+        
+                                            # dont need return as we assume each input has exactly one solution
+
+
